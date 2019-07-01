@@ -1,0 +1,45 @@
+type Author {
+    id: ID!
+    firstName: String!
+    lastName: String
+    description: String
+    bio: String
+    quotes: [Quote]!
+}
+
+type AuthorInput {
+    id: ID
+    firstName: String!
+    lastName: String!
+    description: String
+    bio: String
+}
+
+type Quote {
+    id: ID!
+    quote: String
+    author: Author
+    source: String
+}
+
+input QuoteInput {
+    id: ID
+    quote: String
+    authorId: String
+    source: String
+}
+
+# The Root Query for the application
+type Query {
+    findAuthorById(id: String): Author!
+    findQuoteById(id: String): Quote!
+    getAllQuotes: [Quote]
+    getAllAuthors: [Author]
+}
+ 
+# The Root Mutation for the application
+type Mutation {
+    # createAuthor(input: AuthorInput): Author!
+    # createQuote(input: QuoteInput): Quote!
+}
+

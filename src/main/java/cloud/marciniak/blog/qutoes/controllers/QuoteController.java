@@ -22,6 +22,10 @@ public class QuoteController {
         return quoteRepository.findAll();
     }
 
+    public List<Quote> getAllQuotesByAuthorId(String authorId) {
+        return quoteRepository.findByAuthorId(authorId);
+    }
+
     public Quote createQuote(Quote quote) {
         return quoteRepository.save(quote);
     }
