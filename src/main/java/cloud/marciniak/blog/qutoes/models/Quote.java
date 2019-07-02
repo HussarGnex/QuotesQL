@@ -20,20 +20,20 @@ public class Quote {
         this.source = source;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
     public String getQoute() {
         return qoute;
     }
 
     public void setQoute(String qoute) {
         this.qoute = qoute;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getAuthorId() {

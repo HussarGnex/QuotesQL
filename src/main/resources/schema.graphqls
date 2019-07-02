@@ -4,7 +4,7 @@ type Author {
     lastName: String
     description: String
     bio: String
-    quotes: [Quote]!
+    quotes: [Quote]
 }
 
 type AuthorInput {
@@ -18,7 +18,7 @@ type AuthorInput {
 type Quote {
     id: ID!
     quote: String
-    author: Author
+    authorId: String
     source: String
 }
 
@@ -39,7 +39,7 @@ type Query {
  
 # The Root Mutation for the application
 type Mutation {
-    # createAuthor(input: AuthorInput): Author!
-    # createQuote(input: QuoteInput): Quote!
+    createAuthor(input: AuthorInput): Author!
+    createQuote(input: QuoteInput): Quote!
 }
 

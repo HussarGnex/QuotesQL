@@ -4,9 +4,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import cloud.marciniak.blog.qutoes.controllers.AuthorController;
-import cloud.marciniak.blog.qutoes.controllers.QuoteController;
+import cloud.marciniak.blog.qutoes.resolvers.AuthorResolver;
 import cloud.marciniak.blog.qutoes.resolvers.MutationResolver;
 import cloud.marciniak.blog.qutoes.resolvers.QueryResolver;
+import cloud.marciniak.blog.qutoes.resolvers.QuoteResolver;
 
 @Configuration
 public class GraphqlConfiguration {
@@ -22,12 +23,12 @@ public class GraphqlConfiguration {
     }
 
     @Bean
-    public QuoteController quoteController() {
-        return new QuoteController();
+    public QuoteResolver quoteResolver() {
+        return new QuoteResolver();
     }
 
     @Bean
-    public AuthorController authorController() {
-        return new AuthorController();
+    public AuthorResolver authorResolver() {
+        return new AuthorResolver();
     }
 }

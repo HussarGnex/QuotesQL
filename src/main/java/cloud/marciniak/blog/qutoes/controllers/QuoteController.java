@@ -3,11 +3,13 @@ package cloud.marciniak.blog.qutoes.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import cloud.marciniak.blog.qutoes.exceptions.QuoteNotFoundException;
 import cloud.marciniak.blog.qutoes.models.Quote;
 import cloud.marciniak.blog.qutoes.repositories.QuoteRepository;
 
+@Component
 public class QuoteController {
 
     @Autowired
